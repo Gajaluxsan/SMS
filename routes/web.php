@@ -6,11 +6,17 @@ use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\AdmissionController;
 use App\Models\Admission;
 use App\Models\Classe;
 use App\Models\Subject;
 use App\Models\Teacher;
 use Illuminate\Support\Facades\Response;
+
+
+Route::resource('admissions', AdmissionController::class);
+
+
 
 Route::get('T_S/{id}', function ($id) {
     $teacher = Teacher::all();
@@ -27,7 +33,11 @@ dd($teacher);
 Route::get('login', function () {return view('index');});
 Route::redirect('/', 'login');
 
-Route::get('admission', function () { return view('admission');});
+
+
+Route::get('admission', function () { return view('newadmission');});
+Route::get('ad', function () { return view('admission');});
+
 Route::get('princi', function () {return view('princidb');});
 
 Route::get('register', function () {return view('regidb');});

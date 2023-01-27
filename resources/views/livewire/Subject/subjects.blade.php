@@ -8,9 +8,9 @@
 
 
     @if ($edit_mode)
-        @include('livewire.edit_subject')
+        @include('livewire.Subject.edit_subject')
     @else
-        @include('livewire.create_subject')
+        @include('livewire.Subject.create_subject')
     @endif
     <table class="table table-bordered mt-5">
         <thead>
@@ -29,7 +29,7 @@
                     <td>{{ $subject->S_name }}</td>
                     <td>
                     <button wire:click="edit('{{ $subject->id }}')" class="btn btn-primary btn-sm">Edit</button>
-                    <button wire:click="delete('{{ $subject->id }')" class="btn btn-danger btn-sm">Delete</button>
+                    <button wire:click="delete('{{ $subject->id }}')" class="btn btn-danger btn-sm">Delete</button>
                     </td>
                 </tr>
             @endforeach

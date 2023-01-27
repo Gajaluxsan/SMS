@@ -3,7 +3,7 @@
 
 
 
-     <form id="form" >
+     {{--  <form id="form" >  --}}
      <div class="container">
          <div class="row">
              <div class="col">
@@ -60,7 +60,7 @@
                          <input wire:model='Gender' type="radio" class="btn-check" name="btnradio" value="Male"
                              id="Male" autocomplete="off">
                          <label class="btn btn-outline-primary" for="Male">Male </label>
-                         <input wire:model='Gender' type="radio" class="btn-check" name="btnradio" id="Female"
+                         <input type="radio" class="btn-check" name="btnradio" id="Female"
                              value="Female" autocomplete="off">
                          <label class="btn btn-outline-primary" for="Female">Female</label>
                          @error('Gender')
@@ -92,7 +92,7 @@
              <div class="col">
                  <div class="form-group">
                      <label for="">Role:</label>
-                     <select class="form-select role" wire:model='Role' aria-label="Default select example">
+                     <select class="form-select role" aria-label="Default select example">
                          <option selected>Select Role</option>
                          @foreach ($roles as $role)
                              <option value="{{ $role->id }}" style="text-transform: capitalize">
@@ -129,7 +129,7 @@
              <div class="col">
                  <div class="form-group">
                      <label for="">Select Class:</label>
-                     <select class="form-select " wire:model='class' aria-label="Default select example">
+                     <select class="form-select "aria-label="Default select example">
                          <option selected>Select Class</option>
                          @foreach ($classes as $class)
                              <option value="{{ $class->Class_id }}">
@@ -144,7 +144,7 @@
              <div class="col">
                  <div class="form-group">
                      <label for="">Select Class:</label>
-                     <select class="form-select " wire:model='class' aria-label="Default select example">
+                     <select class="form-select " aria-label="Default select example">
                          <option selected>Select Class</option>
                          @foreach ($classes as $class)
                              <option value="{{ $class->Class_id }}">
@@ -157,7 +157,7 @@
              <div class="col">
                  <div class="form-group">
                      <label for="">Select Subjects</label>
-                     <select class="form-select " wire:model='subject' aria-label="Default select example">
+                     <select class="form-select " aria-label="Default select example">
                          <option selected>Select Subject</option>
                          @foreach ($subjects as $sub)
                              <option value="{{ $sub->S_id }}" style="text-transform: capitalize">
@@ -169,10 +169,10 @@
              </div>
              <div class="col">
                  <div class="form-group">
-                     <button wire:click.prevent="store()" class="btn btn-primary mt-4">
+                     <button wire:click.prevent="westore()" class="btn btn-primary mt-4">
                          Add
                      </button>
-                     <button wire:click.prevent="store()" class="btn btn-danger mt-4">
+                     <button wire:click.prevent="westore()" class="btn btn-danger mt-4">
                          Remove
                      </button>
                  </div>
@@ -180,10 +180,8 @@
          </div>
      </div>
      </div>
-     <button wire:click.prevent="store()" class="btn btn-success mt-3">
-         Save
-     </button>
- </form>
+     <button wire:click="storess()"  class="btn btn-success mt-3">Save</button>
+ {{--  </form>  --}}
  {{--  For Validate  --}}
  {{--  <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
 <script>

@@ -20,7 +20,7 @@ public function store()
     ]);
     Subject::create($validated_data);
 
-        session()->flash('message', 'SUbjects are added....');
+        session()->flash('message', 'Subjects are added....');
         $this->resetInputFields();
 }
 private function resetInputFields()
@@ -32,7 +32,7 @@ private function resetInputFields()
     public function edit($id)
     {
         $this->edit_mode = true;
-        $subject = Subject::where('S_id', '=', $id)->first();
+        $subject = Subject::find($id);
         $this->S_id = $subject->S_id;
         $this->S_name = $subject->S_name;
         $this->subject_id=$id;
@@ -45,7 +45,7 @@ private function resetInputFields()
             'S_id' => 'required',
             'S_name' => 'required',
     ]);
-    $subject = Subject::where('S_id', '=', $this->subject_S_id)->first();
+    $subject = Subject::find($this->subject_id);
     $subject->update($validated_data);
 
 
@@ -69,6 +69,6 @@ public function delete($id)
     public function render()
     {
         $this->subjects = Subject::all();
-        return view('livewire.subjects');
+        return view('livewire.Subject.subjects');
     }
 }

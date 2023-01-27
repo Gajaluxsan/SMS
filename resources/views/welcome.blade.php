@@ -309,7 +309,7 @@
                                             <i class="nav-icon fa fa-tree"></i>
                                             <p>
                                                 Assessments
-                                                <i class="fa fa-angle-left right"></i>
+                                            
                                             </p>
                                         </a>
                                     <li class="nav-item">
@@ -317,7 +317,7 @@
                                             <i class="nav-icon fa fa-tree"></i>
                                             <p>
                                                 Subjects
-                                                <i class="fa fa-angle-left right"></i>
+
                                             </p>
                                         </a>
                                     <li class="nav-item">
@@ -325,25 +325,10 @@
                                             <i class="nav-icon fa fa-tree"></i>
                                             <p>
                                                 Exams
-                                                <i class="fa fa-angle-left right"></i>
+
                                             </p>
                                         </a>
-                                        <ul class="nav nav-treeview">
-                                            <li class="nav-item">
-                                                <a href="pages/UI/general.html" class="nav-link">
-                                                    <i class="fa fa-circle nav-icon"></i>
-                                                    <p> Assessment Exam</p>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                        <ul class="nav nav-treeview">
-                                            <li class="nav-item">
-                                                <a href="pages/UI/general.html" class="nav-link">
-                                                    <i class="fa fa-circle nav-icon"></i>
-                                                    <p> Final Exam</p>
-                                                </a>
-                                            </li>
-                                        </ul>
+
                                     </li>
                                     <li class="nav-item">
                                         <a href="#" class="nav-link">
