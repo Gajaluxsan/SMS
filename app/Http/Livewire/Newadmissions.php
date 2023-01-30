@@ -2,8 +2,11 @@
 
 namespace App\Http\Livewire;
 
+use App\Models\Classe;
 use App\Models\Newadmission;
+use App\Models\Subject;
 use Livewire\Component;
+use Spatie\Permission\Models\Role;
 
 class Newadmissions extends Component
 {
@@ -11,6 +14,10 @@ class Newadmissions extends Component
     public $newadmissions;
     public $edit_mode = false;
     public $admission_id;
+    public $roles;
+    public $subjects;
+    public $classes;
+    public $Class_Teacher;
 
 
 public function store(){
@@ -90,7 +97,10 @@ private function resetInputFields()
 
     public function render()
     {
+        $this->roles =Role::all();
         $this->newadmissions = Newadmission::all();
+        $this->subjects = Subject::all();
+        $this->classes = Classe::all();
         return view('livewire.newadmissions');
     }
 }
